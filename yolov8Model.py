@@ -58,3 +58,7 @@ class YoloV8Model:
                 segments.append((class_name, box))
 
         return segments
+    
+    def orderSequenceFrames(self,results):
+        #The idea is to order the frames and elements in order to be processed sequentially 
+        print("Missing to be implemented")
