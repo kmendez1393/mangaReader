@@ -10,7 +10,7 @@ class YoloV8Model:
         # Define model path based on the type selected
         path_to_model = "./models/yolo8l_50epochs/best.pt" #default
         if(model_type == "frame"):
-            path_to_model = "./models/yolo8l_50epochs_frame/best.pt" #will be updated when new models are available
+            path_to_model = "./models/yolo8l_50epochs/best.pt" #will be updated when new models are available
         elif(model_type == "text-frame"):
             path_to_model = "./models/yolo8l_50epochs/best.pt" #will be updated when new models are available
         self.model = YOLO(path_to_model)  # Assumes best.pt is in the same directory
