@@ -54,7 +54,7 @@ class YoloV8Model:
         for frame in tmpArray:
                 if frame["analyzed"] == "yes":
                     continue
-                elif frame["ymin_norm"] < y_min_tol:
+                elif frame["ymax_norm"] < y_min_tol:
                     # Calculate the distance from previous frame identified = target
                     top_right_corner = np.array([frame["xmax_norm"],frame["ymin_norm"]])
                     frame["distance"] = abs(np.linalg.norm(top_right_corner - target)) #Euclidean distance)
